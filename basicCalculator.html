@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+
+<title>Basic Calculator</title>
+<script>
+
+function calc() {
+var n1 = parseFloat(document.getElementById('n1').value);
+var n2 = parseFloat(document.getElementById('n2').value);
+var oper = document.getElementById('operators').value;
+
+if (oper === '+')
+{
+
+document.getElementById('result').value=n1+n2;
+}
+ if (oper === '-'){
+
+document.getElementById('result').value=n1-n2;
+}
+ if (oper === '/'){
+
+document.getElementById('result').value=n1/n2;
+}
+ if (oper === '*'){
+
+document.getElementById('result').value=n1*n2;
+}
+
+}
+
+</script>
+<style>
+body {
+
+background-color: yellow;
+
+}
+
+.container {
+background-color: white;
+border: 5px;
+padding: 2px;
+margin:5px;
+
+}
+</style>
+</head>
+
+<body>
+
+<h1> Basic Calculator Written in HTML, CSS, and Javascript</h1>
+
+<div class="container">
+<table><input type="text" id="n1"/></br>
+<input type="text" id="n2"/></br>
+
+Please select operator: <select id="operators" name="operators">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="/">/</option>
+<option value="*">*</option>
+</select>
+</br>
+</table>
+
+</form>
+</br>
+<button onclick="calc();">Calculate</button>
+<input type="text" id="result"/>
+</div>
+
+</body>
+
+</html>
